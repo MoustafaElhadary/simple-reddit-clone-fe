@@ -1,10 +1,12 @@
 import {
-  CheckIcon,
+  ArrowRightIcon,
+  ChatAltIcon,
   QuestionMarkCircleIcon,
+  ThumbDownIcon,
   ThumbUpIcon,
-  UserIcon,
 } from '@heroicons/react/solid'
 import Navbar from 'components/Navbar'
+import Link from 'next/link'
 
 const comments = [
   {
@@ -64,7 +66,7 @@ export default function Example() {
                         </p>
                       </div>
                     </div>
-                    <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
+                    <div className="border-t border-gray-200 px-4 pt-5 sm:px-6">
                       <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                         <div className="sm:col-span-2">
                           <dd className="mt-1 text-sm text-gray-900">
@@ -79,6 +81,55 @@ export default function Example() {
                           </dd>
                         </div>
                       </dl>
+                    </div>
+                    <div className="mt-6 flex justify-between space-x-8 px-4 py-5 sm:px-6">
+                      <div className="flex space-x-6">
+                        <span className="inline-flex items-center text-sm">
+                          <button
+                            type="button"
+                            className="inline-flex space-x-2 text-gray-400 hover:text-gray-500"
+                          >
+                            <ThumbUpIcon
+                              className="h-5 w-5"
+                              aria-hidden="true"
+                            />
+                            <span className="font-medium text-gray-900">
+                              11
+                            </span>
+                            <span className="sr-only">likes</span>
+                          </button>
+                        </span>
+                        <span className="inline-flex items-center text-sm">
+                          <button
+                            type="button"
+                            className="inline-flex space-x-2 text-gray-400 hover:text-gray-500"
+                          >
+                            <ThumbDownIcon
+                              className="h-5 w-5"
+                              aria-hidden="true"
+                            />
+                            <span className="font-medium text-gray-900">
+                              11
+                            </span>
+                            <span className="sr-only">likes</span>
+                          </button>
+                        </span>
+                        <span className="inline-flex items-center text-sm">
+                          <button
+                            type="button"
+                            className="inline-flex space-x-2 text-gray-400 hover:text-gray-500"
+                          >
+                            <ChatAltIcon
+                              className="h-5 w-5"
+                              aria-hidden="true"
+                            />
+                            <span className="font-medium text-gray-900">
+                              13
+                            </span>
+                            <span className="sr-only">replies</span>
+                          </button>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </section>
